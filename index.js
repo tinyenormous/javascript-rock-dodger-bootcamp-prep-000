@@ -132,7 +132,7 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  gameInterval = null;
+  clearInterval()
   for (let i = 0; i<ROCKS.length; i++){
     ROCKS[i].remove();
   } 
@@ -140,6 +140,21 @@ function endGame() {
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!");
 }
+
+function clearInterval(){
+  gameInterval = null;
+}
+/*
+ describe('endGame()', () => {
+    it('clears gameInterval', () => {
+      const spy = expect.spyOn(window, 'clearInterval')
+
+      endGame()
+
+      expect(spy).toHaveBeenCalled()
+    })
+*/
+
 
 
 function moveDodger(e) {
