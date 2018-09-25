@@ -144,18 +144,6 @@ function endGame() {
 function clearInterval(){
   gameInterval = null;
 }
-/*
- describe('endGame()', () => {
-    it('clears gameInterval', () => {
-      const spy = expect.spyOn(window, 'clearInterval')
-
-      endGame()
-
-      expect(spy).toHaveBeenCalled()
-    })
-*/
-
-
 
 function moveDodger(e) {
     if (e.which === LEFT_ARROW){
